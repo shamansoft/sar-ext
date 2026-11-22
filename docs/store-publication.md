@@ -9,13 +9,66 @@ release, complete the shared setup and then skip to [Firefox](#firefox).
 
 ### Shared release setup
 
-Keep the homepage brief. Use one sentence about the product and links to
-installation, account instructions, and the privacy policy. Keep build settings
-and reviewer credentials in the release process.
+### Public website copy
 
-Suggested homepage line:
+| Path | Content |
+| --- | --- |
+| `/` | “Save recipes from web pages to your connected storage.” Link to **Get started** and **Privacy Policy**. |
+| `/guide` | Installation, account and storage setup, and how to save a recipe. |
+| `/privacy` | The privacy policy for the extension and the service it uses. Link to this URL from the homepage, guide, and both store submissions. |
 
-> Save recipes from web pages to your connected storage.
+Before publishing, replace the bracketed fields with verified values. Confirm
+which processors are enabled in production and what they receive. Confirm the
+retention and deletion practices for account data, recipe results, logs, and
+processor copies, including whether processors can use submissions for training.
+Verify that production practices match the Limited Use statement. [Chrome privacy rules](https://developer.chrome.com/docs/webstore/program-policies/policies#protecting-user-privacy) · [Mozilla listing requirements](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/#listing-on-amo)
+
+#### Copy for `/privacy`
+
+```markdown
+# Save-A-Recipe Privacy Policy
+
+Effective [date]. Save-A-Recipe is operated by [operator name].
+
+## What we collect and why
+
+We use your email address, account ID, and sign-in information to verify your account and keep you signed in. If you sign in with Google, we may also receive your name and profile photo. We use the storage access you grant to save and manage your recipe files.
+
+When you click Save-A-Recipe, we send the selected page’s URL, title, and cleaned page content to our service to find and save the recipe. The cleaned content can include text outside the recipe. If you create a recipe from a description, we send the text you enter to create and save it.
+
+## Who receives your data
+
+Google provides sign-in and hosts our service. Google processes page content and descriptions when needed to extract or create recipes. When TypeSafe recipe detection is enabled, TypeSafe receives page text to check whether it contains a recipe. Your chosen provider, Google Drive or Dropbox, receives the recipes you save.
+
+## Retention and your choices
+
+We may keep extracted recipes to speed up later saves. Service logs can include account information and page URLs and titles to help operate the service and troubleshoot problems. [State how long account and storage connection data, recipe results, and logs are kept. Describe any processor retention that applies.]
+
+You can delete saved recipe files in your connected storage. For questions or requests to access or delete your account data, contact [privacy contact].
+
+Our use and transfer of information received from Google APIs complies with the Chrome Web Store User Data Policy and the Google API Services User Data Policy, including their Limited Use requirements.
+```
+
+#### Copy for `/guide`
+
+```markdown
+# Get started with Save-A-Recipe
+
+1. Install Save-A-Recipe from the [Chrome Web Store] or [Firefox Add-ons].
+2. [Create a Save-A-Recipe account], verify your email, and connect Google Drive or Dropbox in Save-A-Recipe.
+3. Sign in to the extension. Open a recipe page and click the toolbar icon. On Chrome, the first time you save, choose **Allow page uploads**, then click the icon again.
+4. When the recipe is saved, click **Open** to see it in your connected storage.
+
+To save a recipe from your own notes, right-click the toolbar icon and choose **Create Recipe from Description**.
+
+[Privacy Policy](/privacy)
+```
+
+Link the guide to the live store listings and the working account setup
+destination when those are available. Place the **Get started** link on the
+homepage at `/guide`. If only one store is live, show that installation link.
+
+### Shared build and submission inputs
 
 - [ ] **You — confirm the production project and API URL.** In the [Google Cloud Run
   console](https://console.cloud.google.com/run), select the project used by the
@@ -237,7 +290,7 @@ Suggested homepage line:
 
 - [ ] **You — finish shared release setup.** Use the same public backend and
   Firebase values, privacy policy, and verified reviewer account.
-  [Shared release setup](#shared-release-setup)
+  [Shared build and submission inputs](#shared-build-and-submission-inputs)
 - [ ] **You — choose or recover the Gecko add-on ID.** Sign in to the
   [Mozilla Add-on Developer Hub](https://addons.mozilla.org/developers/).
   For an existing item, open it and download its last signed `.xpi` from
