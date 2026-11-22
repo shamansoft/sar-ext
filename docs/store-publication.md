@@ -17,7 +17,8 @@ release, complete the shared setup and then skip to [Firefox](#firefox).
 | `/guide` | Installation, account and storage setup, and how to save a recipe. |
 | `/privacy` | The privacy policy for the extension and the service it uses. Link to this URL from the homepage, guide, and both store submissions. |
 
-Before publishing, replace the bracketed fields with verified values. Confirm
+Before publishing, replace the bracketed fields with verified values, including
+a working privacy request page or form. Confirm
 which processors are enabled in production and what they receive. Confirm the
 retention and deletion practices for account data, recipe results, logs, and
 processor copies, including whether processors can use submissions for training.
@@ -44,7 +45,7 @@ Google provides sign-in and hosts our service. Google processes page content and
 
 We may keep extracted recipes to speed up later saves. Service logs can include account information and page URLs and titles to help operate the service and troubleshoot problems. [State how long account and storage connection data, recipe results, and logs are kept. Describe any processor retention that applies.]
 
-You choose what to save. Submit only content you have permission to share, and check saved recipes for accuracy before using them. You manage access to your connected storage and can delete saved recipe files there. For questions or requests to access or delete your account data, contact [privacy contact].
+You choose what to save. Submit only content you have permission to share, and check saved recipes for accuracy before using them. You manage access to your connected storage and can delete saved recipe files there. To ask a privacy question or request access to or deletion of your account data, use [privacy request page or form].
 
 Our use and transfer of information received from Google APIs complies with the Chrome Web Store User Data Policy and the Google API Services User Data Policy, including their Limited Use requirements.
 ```
@@ -53,6 +54,8 @@ Our use and transfer of information received from Google APIs complies with the 
 
 ```markdown
 # Get started with Save-A-Recipe
+
+Save-A-Recipe is a free browser extension. You’ll need a Save-A-Recipe account and connected storage.
 
 1. Install Save-A-Recipe from the [Chrome Web Store] or [Firefox Add-ons].
 2. [Create a Save-A-Recipe account], verify your email, and connect Google Drive or Dropbox in Save-A-Recipe.
@@ -134,8 +137,10 @@ homepage at `/guide`. If only one store is live, show that installation link.
 
 - [ ] **You — open the publisher account.** Sign in to the Chrome Web Store
   Developer Dashboard. Complete any registration, account verification and
-  two-step verification prompts. Use a monitored support email.
-  [Chrome Developer Dashboard](https://chrome.google.com/webstore/devconsole)
+  two-step verification prompts. In **Account → Verify your email**, verify a
+  dedicated product email address you can monitor. Chrome displays this address
+  in the listing's contact information.
+  [Chrome Developer Dashboard](https://chrome.google.com/webstore/devconsole) · [Chrome developer account setup](https://developer.chrome.com/docs/webstore/set-up-account#fill_out_your_account_information)
 - [ ] **Assistant can do — prepare an ID-only draft ZIP for a new listing.** Skip
   this if an item already exists. Chrome assigns an item ID after the first
   upload, and the Chrome OAuth client needs that ID. I can generate a minimal
@@ -252,12 +257,12 @@ homepage at `/guide`. If only one store is live, show that installation link.
   recipe markup, and the expected result. The packaged icon is
   [icons/icon128.png](../icons/icon128.png).
 - [ ] **You — fill in Store Listing and Distribution.** Add the description
-  below and the account, storage and any payment requirements. Add the
-  128×128 PNG icon, at least one current screenshot, and your support contact.
-  Choose category, visibility and distribution regions.
+  below. Add the 128×128 PNG icon and at least one current screenshot.
+  Confirm the listing displays the verified product email. Choose category,
+  visibility and distribution regions.
 
   ```text
-  Save-A-Recipe saves recipes from selected web pages or descriptions you enter to your connected storage. When you click the toolbar button to save, the selected page’s URL, title, and cleaned page content go to Save-A-Recipe to find the recipe. The cleaned content can include text outside the recipe.
+  Save-A-Recipe is a free browser extension that saves recipes from selected web pages or descriptions you enter to your connected storage. A Save-A-Recipe account and connected storage are required. When you click the toolbar button to save, the selected page’s URL, title, and cleaned page content go to Save-A-Recipe to find the recipe. The cleaned content can include text outside the recipe.
   ```
 
   [Chrome image requirements](https://developer.chrome.com/docs/webstore/images)
@@ -411,10 +416,10 @@ homepage at `/guide`. If only one store is live, show that installation link.
   tested release, and write steps for the desktop consent prompt, sign-in,
   saving a sample recipe, and reproducing the release from the source archive.
 - [ ] **You — complete the listing and reviewer notes.** Enter the name, summary,
-  description, category, license (`ISC` in the current package), and support contact.
-  The copy in [Store Listing
-  and Distribution](#upload-disclose-and-submit-in-chrome) also applies here.
-  Add the account and storage requirements and any payment requirements.
+  description, category, and license (`ISC` in the current package).
+  Reuse the [free-extension listing copy](#upload-disclose-and-submit-in-chrome)
+  with its account and storage prerequisites. Add the product's support page
+  as **Support website** when available.
   Check **This add-on has a privacy policy** and provide the verified policy.
   Add the private reviewer account credentials, public sample URLs, and
   sign-in and save steps under **Notes for Reviewers**.
