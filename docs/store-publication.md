@@ -44,7 +44,7 @@ Google provides sign-in and hosts our service. Google processes page content and
 
 We may keep extracted recipes to speed up later saves. Service logs can include account information and page URLs and titles to help operate the service and troubleshoot problems. [State how long account and storage connection data, recipe results, and logs are kept. Describe any processor retention that applies.]
 
-You can delete saved recipe files in your connected storage. For questions or requests to access or delete your account data, contact [privacy contact].
+You choose what to save. Submit only content you have permission to share, and check saved recipes for accuracy before using them. You manage access to your connected storage and can delete saved recipe files there. For questions or requests to access or delete your account data, contact [privacy contact].
 
 Our use and transfer of information received from Google APIs complies with the Chrome Web Store User Data Policy and the Google API Services User Data Policy, including their Limited Use requirements.
 ```
