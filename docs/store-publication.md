@@ -9,6 +9,14 @@ release, complete the shared setup and then skip to [Firefox](#firefox).
 
 ### Shared release setup
 
+Keep the homepage brief. Use one sentence about the product and links to
+installation, account instructions, and the privacy policy. Keep build settings
+and reviewer credentials in the release process.
+
+Suggested homepage line:
+
+> Save recipes from web pages to your connected storage.
+
 - [ ] **You — confirm the production project and API URL.** In the [Google Cloud Run
   console](https://console.cloud.google.com/run), select the project used by the
   Save-A-Recipe backend. Open service `cookbook` in region `us-west1` and copy its
@@ -48,22 +56,20 @@ release, complete the shared setup and then skip to [Firefox](#firefox).
   | `FIREBASE_MESSAGING_SENDER_ID` | `messagingSenderId` |
   | `FIREBASE_APP_ID` | `appId` |
 
-- [ ] **You — verify how production handles data.** Confirm who receives the
-  account data, selected-page URL, title and cleaned HTML, and the text entered
-  in **Create Recipe from Description**. Include the API, Firebase, any model or
-  other processor, logs, and the connected storage provider. Confirm which data
-  is retained, who can access it, how deletion works, and any processor training
-  or retention settings. The cleaned HTML can include text outside the recipe.
-- [ ] **Assistant can do — draft the privacy policy and store descriptions.** Provide
-  the verified practices above, the operator name, the support contact, and
-  any payment or account requirements. I can turn those into a policy, a
-  short single-purpose statement, and website-content disclosures for both stores.
-  [Chrome user-data policy](https://developer.chrome.com/docs/webstore/program-policies/policies#protecting-user-privacy) · [Firefox data policy](https://extensionworkshop.com/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control)
-- [ ] **You — publish the policy and verify account registration.** Publish the
-  reviewed policy on a public HTTPS page. Include Chrome's applicable Limited Use
-  statement once you have verified it. Open the page while signed out and copy
-  its exact URL for both listings. Open the Save-A-Recipe homepage while signed
-  out and confirm someone can find and follow the registration instructions.
+- [ ] **You — verify data handling privately.** Confirm what account and recipe
+  data the service receives, where it goes, why recipients need it, and how
+  retention and deletion work. Use that information to check the privacy policy.
+- [ ] **Assistant can do — draft the public privacy policy.** Explain in plain
+  language how Save-A-Recipe collects, uses and shares account information,
+  the selected page's URL, title and cleaned content, and typed descriptions.
+  The cleaned content can include text outside the recipe. Identify the parties
+  that actually receive user data and their roles. Include the applicable
+  Chrome Limited Use statement after verifying the practices.
+  [Chrome user-data policy](https://developer.chrome.com/docs/webstore/program-policies/policies#protecting-user-privacy) · [Firefox listing requirements](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/#listing-on-amo)
+- [ ] **You — publish the privacy policy and check the homepage links.** Publish
+  the policy on its own public HTTPS page, add a **Privacy Policy** link from
+  the homepage, and use the policy URL in both dashboards. Open it while signed
+  out. Check that users can also find the account registration instructions.
   [Save-A-Recipe homepage](https://savearecipe.com/) · [Chrome Limited Use policy](https://developer.chrome.com/docs/webstore/program-policies/policies#limited-use)
 - [ ] **You — create a reviewer account.** Use a dedicated verified Save-A-Recipe
   email/password account with test data, a connected storage test account, and
